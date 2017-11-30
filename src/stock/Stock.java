@@ -1,8 +1,11 @@
 package stock;
 
+import java.util.Date;
+
 public class Stock {
 	private int price;
-	//時間
+	private Date date;
 	private String name;
-	//レベル
+	//高配当か割安かなど株のレベル
+	private String level;
 }
