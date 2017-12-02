@@ -1,10 +1,13 @@
 package stock;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class Client {
-	private int level;
+public class Client implements ClientInterface{
+	private List<Advise> adviseList = new ArrayList<>();
+	private ClientLevel level;
 	private int investmentYears;
 
 	//ここら辺Clientが持つ必要ないかも

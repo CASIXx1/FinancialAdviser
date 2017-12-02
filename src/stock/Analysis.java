@@ -1,5 +1,5 @@
 package stock;
 
-public class Analysis {
+public class Analysis implements Analizable{
 
 }
