@@ -7,8 +7,11 @@ import java.util.Map;
 
 public class Client implements ClientInterface{
 	private List<Advise> adviseList = new ArrayList<>();
+	private int id;
 	private ClientLevel level;
 	private int investmentYears;
+	//保有資産
+	private Asset assets;
 
 	//ここら辺Clientが持つ必要ないかも
 	//何年後に
@@ -19,4 +22,8 @@ public class Client implements ClientInterface{
 	private int targetAnnualInterest;
 	private Map<Stock, Integer> stockNumber = new HashMap<>();
 	private Map<String, Integer> stockLevelRate = new HashMap<>();
+	
+	public Client() {
+		//ここでassetsを入れる
+	}
 }
