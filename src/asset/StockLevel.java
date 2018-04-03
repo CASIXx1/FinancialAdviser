@@ -1,4 +1,4 @@
-package stock;
+package asset;
 
 public enum StockLevel {
 	BEGINNER,

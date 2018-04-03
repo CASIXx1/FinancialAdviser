@@ -1,4 +1,4 @@
-package stock;
+package advise;
 
 public class Company {
 	//公開株数

@@ -1,4 +1,4 @@
-package stock;
+package advise;
 
 public enum ClientLevel {
 	BEGINNER,

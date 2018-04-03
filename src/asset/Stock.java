@@ -1,8 +1,11 @@
-package stock;
+package asset;
 
 import java.util.Date;
 
-public class Stock {
+import advise.Company;
+
+//一株当りの情報
+public class Stock implements Asset{
 	private Company company;
 	private int price;
 	private Date date;

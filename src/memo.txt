@@ -1,0 +1,76 @@
+継承関係は、is a関係にする
+委譲が、has a関係
+use関係（メソッドの引数でもらう。フィールドでは持たない）
+マーカーインターフェース（何も持っていない印を付けるためだけのインターフェース。シリアライザブルなど）
+
+抽象クラスのメリットは、フィールドを持てる
+javaはダックタイピング出来ない
+
+enumを使うタイミング
+固定（今後変更させる予定がない箇所）させるときに使う。
+フィールドが変わるのであれば、クラスで分けた方がいい。
+
+Estateの区分
+http://ooya-mikata.com/beginner/type.html
+
+local変数はメソッドが終わると消える。
+ワークフローの設計
+業務フローをプログラムに置き換える。
+ワークフローに合わせてメソッドを書いていく
+　どこまでアドバイスが進んでいるかを管理する必要がある。
+
+Viewerクラスを作って、
+引数にClientなどを渡して、中身を出力するようなメソッドを作る。
+
+QAの回答が返ってきて、Adviseに進めそうな場合、
+AdviseのQAstatusにtrueを入れる
+↓
+Adviseの締切日を設定
+↓
+Adviseの〆切日より前か後かを取得する
+
+Strategyパターン
+どの優先順位でクライアントを見ていくか
+
+Adapterパターン
+バージョンアップのときに使う
+
+Observerパターン
+監視しているクラスを作って、決められた期限を切ったら、通知を送る。
+ステータスで使う
+
+Subject：Advise
+Concretesubject：Advise（今後変わるかもしれない）
+Observer：ManagementAdvise
+ConcreteObserver：ManagementAdvise
+
+Obserbableは、ステータス
+StatusGenerator
+QAStatusGenerator
+AdviseStatus
+　未着手
+　着手済み
+　レビュー待ち
+　完了
+
+webアプリとして開発
+今作っている部分がモデル層になる
+
+
+
+
+APIにするためには
+　publicメソッドが必要
+　インターフェースを介して、ビジネスロジックを実行させる。
+
+servlet
+　java専用
+jsp
+
+servletがエントリポイント
+HTTPがpost、doPost...
+
+アサインされていないClientを管理していない
+ClientPool
+
+idの発行は、シングルトンパターン

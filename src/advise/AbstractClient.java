@@ -1,17 +1,21 @@
-package stock;
+package advise;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Client implements ClientInterface{
+import asset.AssetManage;
+import asset.Stock;
+
+public abstract class AbstractClient {
 	private List<Advise> adviseList = new ArrayList<>();
 	private int id;
-	private ClientLevel level;
+//	private ClientLevel level;
 	private int investmentYears;
 	//保有資産
-	private Asset assets;
+	private AssetManage assetsManage;
+	private ClientStatus clientStatus;
 
 	//ここら辺Clientが持つ必要ないかも
 	//何年後に
@@ -22,8 +26,18 @@ public class Client implements ClientInterface{
 	private int targetAnnualInterest;
 	private Map<Stock, Integer> stockNumber = new HashMap<>();
 	private Map<String, Integer> stockLevelRate = new HashMap<>();
-	
-	public Client() {
-		//ここでassetsを入れる
+
+	public int getId() {
+		return this.id;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public List<Advise> getAdviseList() {
+		return this.adviseList;
+	}
+
+	public void setAnswer(QA qa) {}
 }
